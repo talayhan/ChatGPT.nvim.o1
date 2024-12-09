@@ -55,7 +55,6 @@ M.complete = function()
     model = "gpt-3.5-turbo-instruct",
     prompt = prefix,
     suffix = suffix,
-    max_tokens = 2048,
     presence_penalty = 0.6,
   }, function(answer, usage)
     set_loading(false)

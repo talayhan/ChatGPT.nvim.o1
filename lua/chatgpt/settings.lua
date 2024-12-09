@@ -22,12 +22,11 @@ local model_validator = function(value)
   return value
 end
 
-local params_order = { "model", "frequency_penalty", "presence_penalty", "max_tokens", "temperature", "top_p" }
+local params_order = { "model", "frequency_penalty", "presence_penalty", "temperature", "top_p" }
 local params_validators = {
   model = model_validator,
   frequency_penalty = float_validator(-2, 2),
   presence_penalty = float_validator(-2, 2),
-  max_tokens = integer_validator(0, 4096),
   temperature = float_validator(0, 1),
   top_p = float_validator(0, 1),
 }
